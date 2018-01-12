@@ -1,3 +1,13 @@
 body {
     text-align: center;
 }
+
+.red {
+    color: #f44;
+    font-weight: 800;
+}
+
+.green {
+    color: #4f4;
+    font-weight: 800;
+}
