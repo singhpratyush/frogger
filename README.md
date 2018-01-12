@@ -6,7 +6,7 @@
 
 ### Controls
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:arrow_up:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:arrow_up:  
 :arrow_left::arrow_down::arrow_right:
 
 ## Gameplay
