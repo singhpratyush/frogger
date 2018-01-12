@@ -1,6 +1,24 @@
-frontend-nanodegree-arcade-game
-===============================
+# Frogger
 
-Students should use this [rubric](https://review.udacity.com/#!/projects/2696458597/rubric) for self-checking their submission. Make sure the functions you write are **object-oriented** - either class functions (like Player and Enemy) or class prototype functions such as Enemy.prototype.checkCollisions, and that the keyword 'this' is used appropriately within your class and class prototype functions to refer to the object the function is called upon. Also be sure that the **readme.md** file is updated with your instructions on both how to 1. Run and 2. Play your arcade game.
+[Play now!](https://singhpratyush.github.io/frogger/)
 
-For detailed instructions on how to get started, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
+![Picture](.github/Frogger.png)
+
+### Controls
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:arrow_up:
+:arrow_left::arrow_down::arrow_right:
+
+## Gameplay
+
+The gameplay is simple. You cross the path to advance levels.
+With each level, the game keeps becoming more and more difficult.
+Initially, up to 5 levels, the number of enemies increase and then the speed at which they move increases.
+
+
+## How to run the game?
+
+Just open the [`index.html`](index.html) file in a `HTML5` enabled browser.
+
+
+> The boilerplate of the game was taken from https://github.com/udacity/frontend-nanodegree-arcade-game.
