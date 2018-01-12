@@ -32,7 +32,7 @@ Enemy.prototype.update = function (dt) {
         -100 : nextPosition;
 
     // See if there is a collision now
-    checkCollision(this);
+    this.checkCollision();
 };
 
 /**
@@ -40,6 +40,19 @@ Enemy.prototype.update = function (dt) {
  */
 Enemy.prototype.render = function () {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+};
+
+/**
+ * @description Check collision
+ */
+Enemy.prototype.checkCollision = function() {
+    if (player.y + 131 >= this.y + 90 && player.x + 25 <= this.x + 88
+        && player.y + 73 <= this.y + 135 && player.x + 76 >= this.x + 11) {
+        player.x = 202.5;
+        player.y = 383;
+        deaths++;
+        displayDead();
+    }
 };
 
 
@@ -96,11 +109,10 @@ Player.prototype.handleInput = function(key) {
         this.y += 50;
     }
 
-    // check for player reaching top of canvas and winning the game
-    // if player wins, add 1 to the score and level
-    if (player.y + 63 <= 0) {
-        player.x = 202.5;
-        player.y = 383;
+    // Check for player reaching top of canvas and winning the game
+    if (this.y + 63 <= 0) {
+        this.x = 202.5;
+        this.y = 383;
         ctx.fillStyle = 'white';
         ctx.fillRect(0, 0, 505, 171);
 
@@ -123,21 +135,8 @@ var displayStats = function(props) {
 };
 
 /**
- * @description Check collision
- * @param enemy {Enemy} - Enemy to check collision with
- */
-var checkCollision = function(enemy) {
-    if (player.y + 131 >= enemy.y + 90 && player.x + 25 <= enemy.x + 88
-        && player.y + 73 <= enemy.y + 135 && player.x + 76 >= enemy.x + 11) {
-        player.x = 202.5;
-        player.y = 383;
-        deaths++;
-        displayDead();
-    }
-};
-
-/**
- * @description Increase the number of enemies on board
+ * @description Increase difficulty of game by increasing the number
+ * of enemies upto 5 and then increasing the speed.
  */
 var increaseDifficulty = function() {
     if (allEnemies.length < 5) {
